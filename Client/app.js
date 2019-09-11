@@ -36,7 +36,7 @@ $(document).ready(function(){
         success: function(data, textStatus, jQxhr){
             var table = $("#movie-table");
             $.each(data, function(idx, elem){
-            table.append("<tr><td>"+elem.Title+"</td><td>"+elem.Director+"</td><td>"+elem.genre+"</td></tr>");
+            table.append("<tr><td>"+elem.Title+"</td><td>"+elem.Director+"</td><td>"+elem.genre+"</td><td><button type='button' onclick='' class='btn btn-link' id='"+elem.movieId+"'>Edit</button></td></tr>");
             });
         },
         error: function(e){
@@ -44,3 +44,16 @@ $(document).ready(function(){
         }
     });
 });
+
+// var id = document.getElementbyId();
+// $.ajax({
+//     url: 'https://localhost:44352/api/movie',
+//     dataType: 'json',
+//     type: 'get',
+//     contentType: 'application/json',
+//     data: JSON.stringify(id),
+//     success: function(data, textStatus, jQxhr){},
+//     error: function(jqXhr, textStatus, errorThrown){
+//         console.log ( errorThrown );
+//     }
+// })
