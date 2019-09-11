@@ -1,0 +1,17 @@
+body{
+  background-color: #C0C4C4;
+}
+
+h1{
+    font-family: arial;
+    color: blue;
+    text-decoration: underline;
+    text-align: center;
+}
+
+p{
+  font-family: arial;
+  color: blue;
+  font-size: 20px;
+  text-align: center;
+}

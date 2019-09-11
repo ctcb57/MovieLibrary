@@ -1,22 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jQuery AJAX POST Form</title>
+    <title>Movie Library</title>
     <meta charset="utf-8">
+    <meta name="description" content="A Movie Database">
+    <meta name="keywords" content="Movies, Directors, Genres, Library">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="movieLibrary.css">
 </head>
 <body>
+    <div id="response">
+        <pre></pre>
+    </div>
+    <br />
+    <!--Title Container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h1>Movie Library<h1>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <!--table intro container-->
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+              <p>All movies within our database are displayed below</p>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <!--Table Container-->
+    <table class="table table-hover" data-toggle="table" data-hrl="https://localhost:44352/api/movie" id="movie-table">
+        <thead>
+          <tr>
+            <th scope="col" data-field="Title">Title</th>
+            <th scope="col" data-field="Director">Director</th>
+            <th scope="col" data-field="genre">Genre</th>
+            <th></th>
+          </tr>
+        </thead>
 
-<div id="response">
-    <pre></pre>
-</div>
-
-<form id="my-form">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="director" placeholder="Director" />
-      <input type="text" name="genre" placeholder="genre" />
-
-    <button type="submit">Submit</button>
-</form>
+    </table>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+              <p>Enter information below to create a new entry</p>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <form id="post-form">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Title" name="title">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Director" name="director">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Genre" name="genre">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>

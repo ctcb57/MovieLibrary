@@ -23,5 +23,24 @@
         e.preventDefault();
     }
 
-    $('#my-form').submit( processForm );
+    $('#post-form').submit( processForm );
 })(jQuery);
+
+$(document).ready(function(){
+    $.ajax({
+        url: 'https://localhost:44352/api/movie',
+        dataType: 'json',
+        type: 'get',
+        async: true,
+        data: JSON,
+        success: function(data, textStatus, jQxhr){
+            var table = $("#movie-table");
+            $.each(data, function(idx, elem){
+            table.append("<tr><td>"+elem.Title+"</td><td>"+elem.Director+"</td><td>"+elem.genre+"</td></tr>");
+            });
+        },
+        error: function(e){
+              console.log(e.responseText);
+        }
+    });
+});
