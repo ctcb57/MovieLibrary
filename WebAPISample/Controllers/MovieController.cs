@@ -38,11 +38,7 @@ namespace WebAPISample.Controllers
         public void Post([FromBody]Movie value)
         {
             // Create movie in db logic
-            Movie movie = new Movie();
-            movie.Title = value.Title;
-            movie.Director = value.Director;
-            movie.genre = value.genre;
-            db.Movies.Add(movie);
+            db.Movies.Add(value);
             db.SaveChanges();
         }
 
@@ -51,11 +47,10 @@ namespace WebAPISample.Controllers
         public void Put(int id, [FromBody]Movie value)
         {
             // Update movie in db logic
-            var movieToEdit = db.Movies.FirstOrDefault(m => m.MovieId == id);
+            var movieToEdit = db.Movies.Find(id);
             movieToEdit.Title = value.Title;
             movieToEdit.Director = value.Director;
             movieToEdit.genre = value.genre;
-            db.Entry(movieToEdit).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }
 
