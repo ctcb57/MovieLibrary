@@ -15,6 +15,13 @@ namespace WebAPISample.Migrations
         protected override void Seed(WebAPISample.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
+            context.Movies.AddOrUpdate(
+            new Models.Movie { Title = "The Departed", genre = "Drama",  Director= "Martin Scorsese" },
+            new Models.Movie { Title = "The Dark Knight", genre = "Drama", Director = "Christopher Nolan" },
+            new Models.Movie { Title = "Inception", genre = "Drama", Director = "Christopher Nolan" },
+            new Models.Movie { Title = "Pineapple Express", genre = "Comedy", Director = "David Gordon Green" },
+            new Models.Movie { Title = "Die Hard", genre = "Action", Director = "John McTiernan" }
+            );
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
