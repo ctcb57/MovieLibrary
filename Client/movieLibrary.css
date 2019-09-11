@@ -15,3 +15,16 @@ p{
   font-size: 20px;
   text-align: center;
 }
+
+th{
+  font-family: arial;
+  color: blue;
+  text-decoration: underline;
+  text-align: center;
+}
+
+td{
+  font-family: arial;
+  color: black;
+  text-align: center;
+}
