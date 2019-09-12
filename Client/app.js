@@ -36,7 +36,9 @@ $(document).ready(function(){
         success: function(data, textStatus, jQxhr){
             var table = $("#movie-table");
             $.each(data, function(idx, elem){
-            table.append("<tr><td>"+elem.Title+"</td><td>"+elem.Director+"</td><td>"+elem.genre+"</td><td><button type='button' onclick='' class='btn btn-link' id='"+elem.movieId+"'>Edit</button></td></tr>");
+            table.append(`<tr><td>${elem.Title}</td><td>${elem.Director}
+              </td><td>${elem.genre}</td><td><button onclick="GetId(${elem.MovieId})""
+              class="btn btn-link" id="${elem.MovieId}">Update</button></td></tr>`);
             });
         },
         error: function(e){
@@ -45,6 +47,20 @@ $(document).ready(function(){
     });
 });
 
+function GetId (id){
+    $.ajax({
+        url: 'https://localhost:44352/api/movie',
+        dataType: 'json',
+        type: 'get',
+        data: { id },
+        success: function(data, textStatus, jQxhr){
+            console.log(data);
+        },
+        error: function(e){
+            console.log(e.responseText);
+        }
+    })
+}
 // var id = document.getElementbyId();
 // $.ajax({
 //     url: 'https://localhost:44352/api/movie',
