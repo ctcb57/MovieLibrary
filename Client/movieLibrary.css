@@ -9,11 +9,19 @@ h1{
     text-align: center;
 }
 
-p{
+h6{
   font-family: arial;
   color: blue;
   font-size: 20px;
   text-align: center;
+}
+
+p{
+  font-family: arial;
+  color: blue;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 th{
@@ -28,3 +36,24 @@ td{
   color: black;
   text-align: center;
 }
+
+.form-row{
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
+#submit-button{
+  margin-left: 10px;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 380px;
+  overflow: auto;
+  }
+
+  .table-wrapper-scroll-y {
+  display: block;
+  }

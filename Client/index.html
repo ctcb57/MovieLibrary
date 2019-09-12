@@ -23,32 +23,32 @@
             <div class="col-sm-3"></div>
         </div>
     </div>
-    <br />
-    <br />
     <!--table intro container-->
     <div class="container">
         <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
-              <p>All movies within our database are displayed below</p>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+              <h6>All movies within our database are displayed below</h6>
+              <p>Click in an individual cell to change the value of the Title, Director, or Genre</p>
+              <p>Click update to submit any necessary changes</p>
           </div>
-          <div class="col-sm-2"></div>
+          <div class="col-sm-1"></div>
         </div>
     </div>
-    <br />
-    <br />
+    <br>
     <!--Table Container-->
-    <table class="table table-hover" data-toggle="table" data-hrl="https://localhost:44352/api/movie" id="movie-table">
-        <thead>
-          <tr>
-            <th style="width: 30%" data-field="Title">Title</th>
-            <th style="width: 30%" data-field="Director">Director</th>
-            <th style="width: 30%" data-field="genre">Genre</th>
-            <th style="width: 10%"></th>
-          </tr>
-        </thead>
-    </table>
-    <br />
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+      <table class="table table-hover" data-toggle="table" data-hrl="https://localhost:44352/api/movie" id="movie-table">
+          <thead>
+            <tr>
+              <th style="width: 30%" data-field="Title">Title</th>
+              <th style="width: 30%" data-field="Director">Director</th>
+              <th style="width: 30%" data-field="genre">Genre</th>
+              <th style="width: 10%"></th>
+            </tr>
+          </thead>
+      </table>
+    </div>
     <br />
     <div class="container">
         <div class="row">
@@ -71,7 +71,7 @@
           <input type="text" class="form-control" placeholder="Genre" name="genre">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
     </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

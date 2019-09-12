@@ -34,7 +34,6 @@ $(document).ready(function(){
         async: true,
         data: JSON,
         success: function(data, textStatus, jQxhr){
-            console.log("TEST")
             var table = $("#movie-table");
             $.each(data, function(index, element){
             table.append(`<tr id="row${element.MovieId}">
