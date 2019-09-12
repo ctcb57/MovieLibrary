@@ -36,6 +36,25 @@
         </div>
     </div>
     <br>
+    <!--Search box Container-->
+    <div class="dropdown">
+      <p id="searchIntro">Select an item to search by:</p>
+      <button class="btn btn-primary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Search Field
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" id="titleSearch">Title</a>
+        <a class="dropdown-item" id="directorSearch">Director</a>
+        <a class="dropdown-item" id="genreSearch">Genre</a>
+      </div>
+      <div class="input-group mb-3">
+        <input text="text" class="form-control" placeholder="Type Search Here" aria-label="user search item" aria-describedby="basic-addon2" id="searchInput">
+        <div class="input-group-append">
+          <button class="btn btn-dark" type="button" id="searchButton">Search</button>
+        </div>
+      </div>
+    </div>
+    
     <!--Table Container-->
     <div class="table-wrapper-scroll-y my-custom-scrollbar">
       <table class="table table-hover" data-toggle="table" data-hrl="https://localhost:44352/api/movie" id="movie-table">

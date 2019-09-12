@@ -44,16 +44,36 @@ td{
   padding-top: 3px;
 }
 
+#searchIntro{
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
 #submit-button{
+  margin-left: 10px;
+}
+
+#dropdownMenuLink{
+  margin-bottom: 5px;
   margin-left: 10px;
 }
 
 .my-custom-scrollbar {
   position: relative;
-  height: 380px;
+  height: 320px;
   overflow: auto;
   }
 
   .table-wrapper-scroll-y {
   display: block;
   }
+
+  #searchInput{
+    margin-left: 10px;
+  }
+
+  #searchButton{
+    margin-right: 10px;
+  }
+  
