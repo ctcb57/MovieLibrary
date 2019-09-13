@@ -12,8 +12,9 @@
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify(dict),
-            success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
+            success: function( data, textStatus, jQxhr) {
+                $("#movie-table tr").remove();
+                BuildTable();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
@@ -27,6 +28,10 @@
 })(jQuery);
 
 $(document).ready(function(){
+    BuildTable();
+});
+
+function BuildTable(){
     $.ajax({
         url: 'https://localhost:44352/api/movie',
         dataType: 'json',
@@ -48,7 +53,9 @@ $(document).ready(function(){
             console.log(e.responseText);
         }
     });
-});
+}
+
+
 
 function SubmitEdit(id){
 
